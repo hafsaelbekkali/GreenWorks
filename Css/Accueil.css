@@ -1,0 +1,1128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+:root {
+     --green: #04E643;
+     --gris: #3E4A3D;
+     --greenB: #5EC289;
+
+}
+
+body::-webkit-scrollbar {
+     width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+     background: var(--gris);
+     border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+     background: var(--green);
+     border-radius: 5px;
+}
+
+
+@keyframes img {
+     0% {
+          transform: rotate(0deg);
+     }
+
+     75% {
+          transform: rotate(180deg);
+     }
+
+     100% {
+          transform: rotate(360deg);
+     }
+}
+
+
+* {
+     font-family: 'Lora', serif;
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     text-transform: capitalize;
+     text-decoration: none;
+     outline: none;
+     transition: all .5s cubic-bezier(.37, 1.14, .26, 1.24);
+}
+
+*::selection {
+     background: var(--green);
+     color: #fff;
+}
+
+html {
+     overflow-x: hidden;
+     font-size: 1.2rem;
+     text-align: center;
+
+}
+
+header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-direction: column;
+     /* position: fixed; */
+     top: 0;
+     left: 0;
+     z-index: 1000;
+     width: 100%;
+}
+
+.navbar {
+     background-color: #04E643;
+     width: 100%;
+     margin-top: .5rem;
+     padding: .4rem 1rem;
+     box-shadow: 1rem 1rem 1rem #3E4A3D;
+}
+
+header .navbar ul {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     list-style: none;
+}
+
+
+header .navbar ul li {
+     margin: 0 2rem;
+}
+
+header .navbar li a {
+     color: var(--gris);
+}
+
+header .navbar li a:hover {
+     color: #fff;
+     font-style: italic;
+     text-decoration: underline;
+}
+
+.fa-bars {
+     font-size: 5rem;
+     margin-top: 2rem;
+     color: var(--greenB);
+     cursor: pointer;
+     display: none;
+}
+
+.fa-times {
+     color: rgb(155, 8, 114);
+}
+
+.home {
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     line-height: 48px;
+}
+
+.home .content {
+     width: 60%;
+}
+
+.home .content h1 {
+     color: var(--green);
+     text-shadow: 2px 2px 1px var(--gris), 3px 3px 3px #fff;
+     font-size: 2.2rem;
+}
+
+.home .content p {
+     font-weight: 500;
+     font-size: 1.3rem;
+}
+
+.buttons {
+     display: flex;
+     justify-content: space-around;
+     margin: 1rem 0;
+}
+
+.buttonss {
+     display: flex;
+     justify-content: center;
+
+}
+
+.btn {
+     height: 3.5rem;
+     width: 15rem;
+     background: none;
+     color: var(--green);
+     font-weight: 300;
+     font-size: 1.5rem;
+     box-shadow: -2px 2px 1px var(--gris), 2px -2px 1px var(--green);
+     cursor: pointer;
+     overflow: hidden;
+     z-index: 0;
+     position: relative;
+     margin: 2rem 4rem 3rem 2rem;
+}
+
+.btn::before,
+.btn::after {
+     position: absolute;
+     content: '';
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background: var(--green);
+     z-index: -1;
+     transition: all 0.5s;
+}
+
+.btn::before {
+     clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.btn:hover:before {
+     clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+
+.btn::after {
+     clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+}
+
+.btn:hover:after {
+     clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+}
+
+.btn:hover {
+     color: #fff;
+     box-shadow: 3px 3px 2px var(--gris), -3px -3px 2px var(--greenB);
+     border: none;
+}
+
+
+.home img {
+     width: 270px;
+     padding-top: 40px;
+     animation: img 10s ease-in-out 1s infinite;
+}
+
+.home2 {
+     min-height: 100vh;
+}
+
+.home2 .box-container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: nowrap;
+     padding: 2rem 0;
+}
+
+.home2 .box-container .box {
+     width: 35rem;
+     height: 36rem;
+     box-shadow: .2rem .3rem .5rem var(--green), -.3rem -.2rem .5rem var(--gris);
+     margin: 2rem 1.5rem;
+     border-radius: 2rem;
+
+}
+
+.home2 .box-container .box img {
+     height: 20rem;
+     width: 100%;
+     object-fit: cover;
+     border-radius: 2rem 2rem 0 0;
+
+}
+
+.home2 .box-container .box .content {
+     padding: 1rem;
+     line-height: 1.5rem;
+}
+
+
+.s1 {
+     color: #bc643c;
+     font-weight: 600;
+     font-size: 28px;
+}
+
+.s2 {
+     color: #0ff;
+     font-weight: 600;
+     font-size: 28px;
+}
+
+.s3 {
+     color: #2fb62f;
+     font-weight: 600;
+     font-size: 28px;
+}
+
+.about {
+     min-height: 100vh;
+}
+
+.about .box-container {
+     background-image: url(../image/6_13_2022\ 09_55_04\ AM.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     min-height: 100vh;
+     width: 100%;
+}
+
+.about .box-container .box {
+     background: rgba(204, 204, 204, 0.548);
+     box-shadow: 0 .3rem .5rem var(--greenB);
+     width: 50%;
+     padding: 1.5rem;
+     line-height: 2rem;
+     border-radius: 1.5rem;
+}
+
+@keyframes colortext {
+     0% {
+          color: rgb(188, 100, 60);
+     }
+
+     50% {
+          color: var(--green);
+     }
+
+     100% {
+          color: var(--gris);
+     }
+}
+
+.about .box-container .box h3 {
+     animation: colortext 5s ease-in-out .7s infinite;
+     color: var(--greenB);
+     text-decoration: underline;
+     font-size: 30px;
+}
+
+.container {
+     margin: 1rem 0;
+     text-align: start;
+     font-size: 23px;
+}
+
+.container .info {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+.social-media {
+     display: flex;
+     flex-direction: column;
+     line-height: 1.8rem;
+}
+
+.info a {
+     color: var(--greenB);
+}
+
+.info a:hover {
+     color: var(--green);
+     transform: scale(1.3);
+     text-decoration: underline;
+}
+
+.info h4 {
+     text-decoration: underline;
+     font-style: oblique;
+}
+
+/* Contact */
+.contact .box-container {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     margin-top: 2rem;
+}
+
+.contact .box-container img,
+.connexion .box-container img,
+.les-green-works1 img,
+.list-green-works .box-container .box img,
+.Ajouter .box-container img,
+.Modifier .box-container img {
+     box-shadow: 0 .6rem 2rem var(--gris);
+}
+
+.contact .box-container form,
+.connexion .box-container .box form,
+.inscription .box-container .box,
+.Ajouter .box-container .box form,
+.Modifier .box-container .box form {
+     box-shadow: 0 .6rem 2rem var(--gris);
+     padding: 1.8rem;
+     line-height: 1.3rem;
+}
+
+.contact .box-container form label,
+.connexion .box-container .box form label,
+.inscription .box-container .box form label,
+.Ajouter .box-container .box form label,
+.Modifier .box-container .box form label {
+     display: block;
+     color: rgb(155, 8, 114);
+     font-weight: bold;
+     text-align: start;
+}
+
+.contact .box-container form h3,
+.connexion .box-container .box form h3,
+.inscription .box-container .box h3,
+.Ajouter .box-container .box h3,
+.Modifier .box-container .box h3 {
+     color: var(--green);
+     font-size: 30px;
+     margin-bottom: 2rem;
+}
+
+.contact .box-container form input,
+.contact .box-container form textarea,
+.connexion .box-container .box form input,
+.inscription .box-container .box form input,
+.Ajouter .box-container .box form input,
+.Ajouter .box-container .box form textarea,
+.Modifier .box-container .box form input,
+.Modifier .box-container .box form textarea {
+     padding: 0 15px;
+     border: none;
+     border-bottom: 2px solid var(--greenB);
+     margin-bottom: 1rem;
+     color: olive;
+     width: 300px;
+     font-size: 26px;
+}
+
+.contact .box-container form textarea,
+.Ajouter .box-container form textarea,
+.Modifier .box-container form textarea {
+     height: 1.6rem;
+}
+
+.submit input {
+     height: 3rem;
+     width: 8rem;
+     background: none;
+     color: var(--green);
+     font-weight: 300;
+     font-size: 1.5rem;
+     box-shadow: -2px 2px 1px var(--gris), 2px -2px 1px var(--green);
+     cursor: pointer;
+}
+
+.submit input:hover {
+     box-shadow: 2px -2px 1px var(--gris), -2px 2px 1px var(--green);
+}
+
+/* mes green works */
+
+.greenWorks .insConn {
+     height: 100vh;
+     background-image: url(../image/jasminum-auriculatum-flower-twig-with-wedding-card-white-background.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.greenWorks .insConn .logo img {
+     margin-top: 2.2rem;
+     visibility: hidden;
+}
+
+.text {
+     line-height: 2.6rem;
+     text-align: start;
+     margin: 1.8rem 17rem;
+     font-size: 30px;
+}
+
+.text h5 {
+     color: rgb(171, 113, 13);
+}
+
+.text h3 {
+     color: var(--green);
+}
+
+/* Connexion */
+.connexion {
+     height: 100vh;
+}
+
+.connexion .box-container {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     margin: 1.5rem auto;
+     min-height: 100vh;
+}
+
+.connexion .box-container .inscrire {
+     display: flex;
+     flex-direction: column;
+     line-height: 2.8rem;
+     color: var(--green);
+}
+
+.connexion .box-container .inscrire a {
+     color: rgb(155, 8, 114);
+     font-style: oblique;
+}
+
+.connexion .box-container .inscrire a:hover {
+     color: var(--green);
+     transform: scale(1.2);
+     transition: .5s;
+}
+
+/* Inscription */
+.inscription .box-container header {
+     background-color: #fff;
+}
+
+.inscription .box-container {
+     height: 100vh;
+     background-image: url(../image/lion-g236245937_1280.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.inscription .box-container .box {
+     display: flex;
+     justify-content: start;
+     margin: 2rem 0 auto 2rem;
+     width: 60%;
+     flex-direction: column;
+}
+
+.inscription .box-container .img {
+     display: none;
+}
+
+.inscription .box-container .box h3 {
+     color: #000;
+}
+
+.inscription .box-container .box form {
+     color: #000;
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     row-gap: 20%;
+}
+
+.submit input {
+     background-color: #ffffffac;
+}
+
+/* les-green-works */
+.les-green-works1 {
+     min-height: 100vh;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+.les-green-works1 img {
+     border-radius: 1rem;
+}
+
+.les-green-works1 .contenu {
+     width: 40%;
+     line-height: 3rem;
+     font-size: 1.2rem;
+}
+
+.les-green-works1 .contenu h4 {
+     background: -webkit-linear-gradient(left, #222222, rgb(245, 183, 245), #61d641, rgb(255, 121, 143), #222222);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-size: 2.2rem;
+     font-style: oblique;
+     letter-spacing: 1rem;
+}
+
+.les-green-works1 .contenu .list {
+     color: var(--greenB);
+}
+
+.les-green-works1 .contenu .list:hover {
+     background: -webkit-linear-gradient(right, rgb(255, 121, 143), #222222, rgb(255, 121, 143), #000, #222222);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-size: 1.5rem;
+     transition: ease-in-out .8;
+     letter-spacing: .3rem;
+}
+
+.les-green-works1 .contenu a i {
+     font-size: 2rem;
+     color: rgb(255, 121, 143);
+}
+
+.les-green-works1 .contenu a i:hover {
+     color: var(--greenB);
+     font-size: 2.2rem;
+}
+
+/* list-green-works */
+.list-green-works {
+     height: 100vh;
+}
+
+.list-green-works .box-container {
+     margin-top: 4rem;
+}
+
+.list-green-works h2 {
+     color: var(--greenB);
+     font-style: oblique;
+     font-size: 2rem;
+     letter-spacing: 1rem;
+}
+
+.list-green-works .box-container .box {
+     display: flex;
+     justify-content: space-around;
+     margin: 6rem 10rem auto auto;
+     align-items: center;
+}
+
+.list-green-works .box-container .box .container {
+     line-height: 2.5rem;
+     margin-left: -5rem;
+}
+
+.list-green-works .box-container .box .container h4 {
+     color: rgb(155, 8, 114);
+     font-style: oblique;
+}
+
+.list-green-works .box-container .box .image-icons img {
+     object-fit: cover;
+}
+
+.list-green-works .box-container .box .image-icons .icons {
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     font-size: 1.8rem;
+}
+
+.list-green-works .box-container .box .image-icons .icons:hover {
+     background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+}
+
+.list-green-works .box-container .box .image-icons .icons i {
+     transform: translateY(19rem);
+     transition: ease-in-out .8s;
+}
+
+.list-green-works .box-container .box .image-icons:hover .icons i {
+     transform: translateY(0);
+     cursor: pointer;
+}
+
+.list-green-works .box-container .box .image-icons:hover .icons i:hover {
+     font-size: 2.4rem;
+}
+
+.bi-hand-thumbs-up-fill,
+.bi-bookmark-heart-fill {
+     color: rgb(4, 4, 215);
+}
+
+.bi-balloon-heart-fill {
+     color: rgb(215, 3, 3);
+}
+
+.bi-emoji-angry-fill,
+.bi-emoji-laughing-fill {
+     color: rgb(225, 146, 0);
+}
+
+.bi-hand-thumbs-down-fill {
+     color: orangered;
+}
+
+.list-green-works .box-container .box .image-icons {
+     position: relative;
+     overflow: hidden;
+}
+
+hr {
+     margin-top: 1rem;
+}
+
+/* Home Login */
+
+.home-login {
+     height: 100vh;
+     background-image: url(../image/0643c7532ad7ad6177033697b92f044c.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+}
+
+.home-login header {
+     background-color: #fff;
+}
+
+.home-login .box-container .box h3 {
+     width: 40%;
+     line-height: 4rem;
+     margin: 4% 20% 0 20%;
+}
+
+.home-login .box-container .box .buttons {
+     width: 80%;
+}
+
+.green {
+     color: var(--green);
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-style: oblique;
+     font-size: 1.4rem;
+}
+
+.nom {
+     color: rgb(171, 113, 13);
+     font-size: 1.5rem;
+     font-style: italic;
+     letter-spacing: .3rem;
+}
+
+#img {
+     display: none;
+}
+
+/* Ajouter */
+
+.Ajouter .box-container,
+.Modifier .box-container {
+     height: 100vh;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+::-webkit-file-upload-button {
+     background-color: transparent;
+     border: none;
+     color: rgb(155, 8, 114);
+     cursor: pointer;
+     transition: .8s;
+}
+
+::-webkit-file-upload-button:hover {
+     color: var(--greenB);
+     font-size: .9rem;
+}
+
+/* Afficher */
+
+.Afficher {
+     height: 100vh;
+}
+
+.Afficher .box-container .box {
+     display: flex;
+     justify-content: space-around;
+     margin-top: 2rem;
+     align-items: center;
+}
+
+.Afficher .box-container .box .container {
+     color: var(--greenB);
+}
+
+.Afficher .btn {
+     height: fit-content;
+     text-align: center;
+     width: 60%;
+}
+span{
+     color:var(--gris)
+}
+
+
+
+
+/* media queries */
+
+@media (max-width:800px) {
+     html {
+          font-size: 55%;
+     }
+
+     header {
+          flex-direction: row;
+          padding: 0 1.5rem;
+          position: fixed;
+     }
+
+     .fa-bars {
+          font-size: 4rem;
+          display: block;
+     }
+
+     .navbar {
+          background-color: #fff;
+     }
+
+     header .navbar {
+          position: fixed;
+          top: -100rem;
+          left: 0;
+          width: 100%;
+          border-top: .2rem solid #ccc;
+          opacity: 0;
+     }
+
+     header .navbar ul {
+          flex-flow: column;
+          padding: 2rem 0;
+          background-color: #fff;
+     }
+
+     header .navbar ul li {
+          width: 100%;
+          margin: 1rem 0;
+     }
+
+     header .navbar ul li a {
+          font-size: 2.3rem;
+          display: block;
+     }
+
+     header .navbar ul li a:hover {
+          color: #04E643;
+     }
+
+     .fa-times {
+          transform: rotate(180deg);
+     }
+
+     header .nav-toggle {
+          top: 11rem;
+          opacity: 1;
+     }
+
+     header img {
+          display: none;
+     }
+
+     .home img {
+          display: none;
+     }
+
+     .home .content {
+          width: 100%;
+     }
+
+     .home .content h1 {
+          font-size: 5rem;
+     }
+
+     .home .content p {
+          font-size: 2.5rem;
+          margin-top: 3rem;
+     }
+
+     .btn {
+          height: 5.5rem;
+          width: 22rem;
+          font-size: 2.5rem;
+     }
+
+     .home2 .box-container {
+          flex-wrap: wrap;
+     }
+
+     .home2 .box-container .box {
+          height: fit-content;
+          width: 50rem;
+
+     }
+
+     .home2 .box-container .box .content h3 {
+          font-size: 30px;
+          margin: 1.5rem auto;
+     }
+
+     .home2 .box-container .box .content p {
+          font-size: 20px;
+          line-height: 3rem;
+     }
+
+     .about .box-container .box {
+          background: rgba(204, 204, 204, 0.548);
+          box-shadow: 0 .3rem .5rem var(--greenB);
+          width: 80%;
+          padding: 1.5rem;
+          line-height: 3rem;
+          border-radius: 1.5rem;
+          font-size: 22px;
+     }
+
+     .about .box-container .box h3 {
+          margin-bottom: 2rem;
+     }
+
+     .container .info .social-media {
+          line-height: 4rem;
+     }
+
+     .contact .box-container {
+          margin-top: 17rem;
+     }
+
+     .contact .box-container img {
+          display: none;
+     }
+
+     .greenWorks .insConn .logo img {
+          margin-top: 6rem;
+          visibility: inherit;
+     }
+
+     .greenWorks .insConn .text {
+          line-height: 8rem;
+          margin: auto 5rem 3rem 5rem;
+     }
+
+     .connexion .box-container img {
+          display: none;
+     }
+
+     .contact .box-container form,
+     .connexion .box-container .box form {
+          line-height: 4rem;
+          font-size: 23px;
+     }
+
+     .submit input {
+          height: 4.4rem;
+     }
+
+     .connexion .box-container .inscrire {
+          line-height: 6rem;
+     }
+
+     .inscription .box-container header {
+          background-color: transparent;
+     }
+
+     .inscription .box-container {
+          background-image: url(../image/lighthouse-gf40106b43_1280.jpg);
+     }
+
+     .inscription .box-container .box {
+          display: flex;
+          justify-content: center;
+          margin: 5rem auto;
+          width: 80%;
+          flex-direction: column;
+     }
+
+     .inscription .box-container .img {
+          display: block;
+          margin-left: 3rem;
+     }
+
+     .les-green-works1 {
+          display: block;
+          margin-top: 9rem;
+     }
+
+     .les-green-works1 img {
+          width: 400px;
+     }
+
+     .les-green-works1 .contenu {
+          width: 60%;
+          font-size: 2.3rem;
+          margin: 3.3rem auto;
+          line-height: 6rem;
+     }
+
+     .les-green-works1 .contenu h4 {
+          font-size: 3.2rem;
+     }
+
+     .les-green-works1 .contenu .list:hover {
+          font-size: 2.6rem;
+     }
+
+     .les-green-works1 .contenu a i {
+          font-size: 4rem;
+          color: rgb(255, 121, 143);
+     }
+
+     .les-green-works1 .contenu a i:hover {
+          color: var(--greenB);
+          font-size: 4.4rem;
+     }
+
+     .list-green-works h2 {
+          color: rgb(245, 183, 245);
+          font-size: 4rem;
+     }
+
+     .list-green-works .box-container .box {
+          flex-direction: column;
+          margin: 2rem;
+     }
+
+     .list-green-works .box-container .box .image-icons .icons {
+          top: 8rem;
+          font-size: 3rem;
+     }
+
+     .list-green-works .box-container .box .image-icons:hover .icons i:hover {
+          font-size: 3.6rem;
+     }
+
+     .home-login {
+          background-image: url(../image/69f444338a58499b60dbdf6e866dbb9b.jpg);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .home-login .box-container .box h3 {
+          font-size: 2rem;
+          width: 69%;
+          margin: auto 9rem 8rem 9rem;
+     }
+
+     .home-login .box-container .box .buttons {
+          width: 90%;
+     }
+
+     .home-login .box-container .box .buttons .btn {
+          background-color: #fff;
+          margin: -2.5rem;
+     }
+
+     .green,
+     .nom {
+          font-size: 2.5rem;
+     }
+
+     #img {
+          margin: 0 20rem 10rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+     }
+
+     .Ajouter .box-container img,
+     .Modifier .box-container img {
+          display: none;
+     }
+
+     .Ajouter .box-container .box form label,
+     .Modifier .box-container .box form label {
+          font-size: 1.8rem;
+     }
+
+     .Ajouter .box-container .box form,
+     .Modifier .box-container .box form {
+          line-height: 5rem;
+     }
+
+     .Ajouter .box-container .box form textarea,
+     .Modifier .box-container .box form textarea {
+          height: 3.6rem;
+     }
+}
+
+@media (min-width:800px) and (max-width:950px) {
+     .home img {
+          width: 250px;
+          animation: img 0s ease-in-out 1s;
+     }
+
+     .btn {
+          height: 3.5rem;
+          width: 10rem;
+          font-size: 1.2rem;
+     }
+
+     .home2 .box-container {
+          flex-wrap: wrap;
+     }
+
+     .inscription .box-container .box {
+          margin: 3rem auto;
+          width: 100%;
+     }
+
+     .inscription .box-container .box form {
+          color: #000;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          row-gap: 20%;
+     }
+
+     .les-green-works1 {
+          display: block;
+          margin-top: 9rem;
+     }
+
+     .les-green-works1 img {
+          width: 700px;
+     }
+
+     .les-green-works1 .contenu {
+          width: 80%;
+          font-size: 1.3rem;
+          margin: 3.3rem auto;
+          line-height: 6rem;
+     }
+
+     .les-green-works1 .contenu h4 {
+          font-size: 2.5rem;
+     }
+
+     .les-green-works1 .contenu .list:hover {
+          font-size: 2.6rem;
+     }
+
+     .les-green-works1 .contenu a i {
+          font-size: 3.3rem;
+          color: rgb(255, 121, 143);
+     }
+
+     .les-green-works1 .contenu a i:hover {
+          color: var(--greenB);
+          font-size: 4.4rem;
+     }
+
+     .list-green-works .box-container .box {
+          margin: 0;
+     }
+}
